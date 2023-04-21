@@ -1,0 +1,151 @@
+!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>FAQ</title>
+		<meta name="author" content="Benjamin Wongmanee">
+		<meta name="description" content="CSCI 1210 Web Design">
+		<meta name="keywords" content="CSCI 1210, web, design">
+		<link rel="icon" type="image/x-icon" href="images/favicon.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap">
+		<link rel="stylesheet" href="css/faq.css">
+		
+		<!-- faq.html
+                Author:			Benjamin Wongmanee
+                Date Started:	4/19/23
+                Date Modified:	4/19/23
+                Assignment:		Semester Project
+                Purpose:		FAQ Page
+		-->		
+
+		<script>
+			function loadHeaderAndFooter() {
+				var xhrHeader = new XMLHttpRequest();
+				var xhrFooter = new XMLHttpRequest();
+
+				xhrHeader.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("header").innerHTML = this.responseText;
+					}
+				};
+
+				xhrFooter.onreadystatechange = function () {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("footer").innerHTML = this.responseText;
+					}
+				};
+
+				xhrHeader.open("GET", "header.html", true);
+				xhrHeader.send();
+
+				xhrFooter.open("GET", "footer.html", true);
+				xhrFooter.send();
+			}			
+		</script>
+	</head>
+
+    <body onload="loadHeaderAndFooter()">
+        <!-- HEADER -->
+        <div id="header"></div>
+
+        <!-- HAVE ANY QUESTIONS? -->
+        <div id="question-search-section">
+            <header>Have any questions?</header>
+            <p>
+				<input type="text" name="question-search" id="question-search" placeholder="Search for questions...">
+			</p>
+        </div>
+
+        <!-- FAQ -->
+        <div id="FAQ-section">
+            <div id="topic-select">
+                <nav>
+                    <div class="topic">Services</div>
+                    <div class="topic">Policies</div>
+                    <div class="topic" style="background-color: #F6C526;">Events</div>
+                    <div class="topic">Rentals</div>
+                    <div class="topic">Merchandise</div>
+                    <div class="topic">Contact</div>
+                </nav>
+            </div>
+            <div id="question-menu">
+                <div class="accordion">
+                    <div class="contentBx">
+                        <div class="question">How do I register for an event or tournament?</div>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contentBx">
+                        <div class="question">What is the cost of attending an event?</div>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contentBx">
+                        <div class="question">What equipment do I need to bring to the event?</div>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contentBx">
+                        <div class="question">How do I know if an event is suitable for my skill level?</div>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contentBx">
+                        <div class="question">How many people can participate in an event?</div>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contentBx">
+                        <div class="question">Where can I find the rules and regulations of each event?</div>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>                
+                </div>
+                <script>
+                    const accordion = document.getElementsByClassName('contentBx');
+
+                    for (i = 0; i < accordion.length; i++){
+                        accordion[i].addEventListener('click', function(){
+                            this.classList.toggle('active')
+                        })
+                    }
+                </script>
+            </div>
+        </div>
+
+        <!-- STILL HAVE QUESTIONS? -->
+        <div id="contact-us-section">
+            <header>Still have questions?</header>
+            <p>
+				If you can't find the answer to your question in our FAQ, you can always contact us. We'll respond to you as soon as we can!
+			</p>
+            <button id="contact-us-button">Contact Us</button>
+        </div>
+
+        <!-- FOOTER -->
+		<div id="footer"></div>
+
+		<!-- JS CHECKERS -->
+		<script src="/js/w3c.js"></script>
+    </body>
+</html>

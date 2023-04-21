@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Event Calendar and Tournamnet Info</title>
+		<meta name="author" content="Benjamin Wongmanee">
+		<meta name="description" content="CSCI 1210 Web Design">
+		<meta name="keywords" content="CSCI 1210, web, design">
+		<link rel="icon" type="image/x-icon" href="images/favicon.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap">
+		<link rel="stylesheet" href="css/events.css">
+		
+		<!-- events.html
+				Author:			Benjamin Wongmanee
+				Date Started:	4/13/23
+				Date Modified:	4/19/23
+				Assignment:		CSCI 1210 Semester Project
+				Purpose:		Event Calendar and Tournament Info Page
+		-->		
+
+		<script>
+			function loadHeaderAndFooter() {
+				var xhrHeader = new XMLHttpRequest();
+				var xhrFooter = new XMLHttpRequest();
+
+				xhrHeader.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("header").innerHTML = this.responseText;
+					}
+				};
+
+				xhrFooter.onreadystatechange = function () {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("footer").innerHTML = this.responseText;
+					}
+				};
+
+				xhrHeader.open("GET", "header.html", true);
+				xhrHeader.send();
+
+				xhrFooter.open("GET", "footer.html", true);
+				xhrFooter.send();
+			}
+
+			function notImplementedException() {
+				alert("This feature has not been implemented yet. This webpage is designed for modeling purposes only.");
+			}
+			
+		</script>
+	</head>
+
+    <body onload="loadHeaderAndFooter()">		
+		<!-- HEADER -->
+        <div id="header"></div>
+
+		<!-- SEARCH BAR -->
+		<div id="search-bar-section">
+			<p>
+				<input type="text" name="event-search" id="event-search" placeholder="Search for events...">
+			</p>
+		</div>
+
+		<!-- EVENT CALENDAR -->
+		<div id="event-calendar">
+
+			<!-- YEAR/MONTH SELECT -->
+			<div class="event-calendar-section">
+				<!-- YEAR SELECT -->
+				<div id="year-select">
+					<div class="arrow scroll-left" onclick="decrementText()">&lt;</div>
+					<div id="year-select-text">2023</div>
+					<div class="arrow scroll-right" onclick="incrementText()">&gt;</div>
+
+					<script>
+						var scrollText = document.getElementById('year-select-text');
+
+						function decrementText() {
+						scrollText.innerHTML = parseInt(scrollText.innerHTML) - 1;
+						}
+
+						function incrementText() {
+						scrollText.innerHTML = parseInt(scrollText.innerHTML) + 1;
+						}
+					</script>
+				</div>
+				<!-- MONTH SELECT -->
+				<div id="month-select">
+					<nav>
+						<div class="month-name">January</div>
+						<div class="month-name">February</div>
+						<div class="month-name">March</div>
+						<div class="month-name" style="background-color: #F6C526;">April</div>
+						<div class="month-name">May</div>
+						<div class="month-name">June</div>
+						<div class="month-name">July</div>
+						<div class="month-name">August</div>
+						<div class="month-name">September</div>
+						<div class="month-name">October</div>
+						<div class="month-name">November</div>
+						<div class="month-name">December</div>
+					</nav>
+					
+					<script>
+						const monthSelect = document.getElementById("month-select");
+						monthSelect.addEventListener("click", (event) => {
+							if (event.target.classList.contains("month-name")) {
+								return notImplementedException();
+							}
+						});
+					</script>
+				</div>
+			</div>
+
+			<!-- CALENDAR -->
+			<div class="event-calendar-section">
+				<header>
+					APRIL 2023
+					<hr>
+				</header>
+				<div id="calendar">
+					<div class="week-header"> <!-- Header -->
+						<div class="day-header">Sun</div>
+						<div class="day-header">Mon</div>
+						<div class="day-header">Tue</div>
+						<div class="day-header">Wed</div>
+						<div class="day-header">Thu</div>
+						<div class="day-header">Fri</div>
+						<div class="day-header">Sat</div>
+					</div>
+					<div class="week"> <!-- Row 1 -->
+						<div class="day"></div>
+						<div class="day"></div>
+						<div class="day"></div>
+						<div class="day"></div>
+						<div class="day"></div>
+						<div class="day"></div>
+						<div class="day">1</div>
+					</div>
+					<div class="week"> <!-- Row 2 -->
+						<div class="day">
+							2
+							<span class="coolidge-clash"></span>
+						</div>
+						<div class="day">3</div>
+						<div class="day">4</div>
+						<div class="day">5</div>
+						<div class="day">6</div>
+						<div class="day">7</div>
+						<div class="day">
+							8
+							<span class="carried"></span>
+						</div>
+					</div>
+					<div class="week"> <!-- Row 3 -->
+						<div class="day">9</div>
+						<div class="day">10</div>
+						<div class="day">11</div>
+						<div class="day">12</div>
+						<div class="day">13</div>
+						<div class="day">14</div>
+						<div class="day">15</div>
+					</div>
+					<div class="week"> <!-- Row 4 -->
+						<div class="day" style="border:3px solid #F6C526">
+							16
+							<span class="coolidge-clash"></span>
+						</div>
+						<div class="day">17</div>
+						<div class="day">18</div>
+						<div class="day">19</div>
+						<div class="day">20</div>
+						<div class="day">21</div>
+						<div class="day">22</div>
+					</div>
+					<div class="week"> <!-- Row 5 -->
+						<div class="day">
+							23
+							<span class="coolidge-clash"></span>
+						</div>
+						<div class="day">24</div>
+						<div class="day">25</div>
+						<div class="day">26</div>
+						<div class="day">27</div>
+						<div class="day">28</div>
+						<div class="day">29</div>
+					</div>
+					<div class="week"> <!-- Row 6 -->
+						<div class="day">
+							30
+							<span class="coolidge-clash"></span>
+						</div>
+						<div class="day"></div>
+						<div class="day"></div>
+						<div class="day"></div>
+						<div class="day"></div>
+						<div class="day"></div>
+						<div class="day"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- EVENT INFO -->
+			<div class="event-calendar-section">
+				<header>
+					April 16, 2023
+				</header>
+				<div id="event-info">
+					<h1>Coolidge Clash #15</h1>
+					<p>
+						Chattanooga's Weekly Smash Tournament!
+					</p>
+					<hr>
+					<p>
+						<strong>$5 venue fee</strong> is waved with a purchase at Be Caffeinated
+						<br><br>
+
+						<strong>$5 main bracket fee</strong>
+						<br><br>
+
+						<strong>Free Redemption Bracket</strong> for anyone who goes 0-2 or 1-2
+					</p>
+					<hr>
+					<p>
+						14 W Kent St. Chattanooga, TN 37405
+						<br><br>
+
+						<strong>Every Sunday!</strong>
+						<br>
+						Friendlies @ 1PM EST 
+						<br>
+						Bracket starts @ 2PM EST
+						<br><br>
+						
+						<a href="https://www.start.gg/tournament/coolidge-clash-15/details" target="_blank" onclick="return confirm('This link will redirect you to start.gg, a third-party website. Are you sure you want to continue?')">Sign up here!</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div id="footer"></div>
+
+		<!-- JS CHECKERS -->
+		<script src="/js/w3c.js"></script>
+    </body>
+</html>

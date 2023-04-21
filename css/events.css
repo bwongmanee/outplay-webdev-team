@@ -1,0 +1,366 @@
+/* events.css
+        Author:			Benjamin Wongmanee
+        Date Started:	4/13/23
+        Date Modified:	4/19/23
+        Assignment:		Semester Project
+        Purpose:		CSS for Events Page
+*/
+
+/* ========================= BODY =========================*/
+body {
+    /* Layout */
+    margin: 0px;
+
+    /* Design */
+    font-family: 'Poppins', sans-serif;
+    background-color: #353535;
+}
+
+
+
+/* ========================= SCROLLBAR =========================*/
+::-webkit-scrollbar {
+    /* Layout */
+    width: 20px;
+}
+::-webkit-scrollbar-thumb {
+    /* Design */
+    background-color: #4b4a4a;
+    border-radius: 100px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+::-webkit-scrollbar-track {
+    /* Design */
+    background: linear-gradient(180deg, #1E1E1E 0%, #292929 6.96%, #292929 93.27%, #1E1E1E 100%);
+}
+
+
+
+/* ========================= ANCHOR ELEMENTS ========================= */
+a{
+    /* Design */
+	color: inherit; /* links inherit the color from their parent */
+    text-decoration: none;
+}
+
+
+
+/* ========================= SEARCH BAR SECTION ========================= */
+#search-bar-section {
+    /* Layout */
+    width: 100%;
+    margin-top: 145px; /* 100px (header size) + 45px (space from header to search bar) */
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+#event-search {
+    /* Layout */
+    height: 40px;
+    width: 92.5%;
+    margin: 0 auto;
+    padding-left: 15px;
+
+    /* Design */
+    color: #FFFFFF;
+    background: #565656;
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+/* ========================= EVENT CALENDAR SECTION ========================= */
+#event-calendar {
+    /* Layout */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* aligns all child elements along a horizontal axis */
+}
+
+/* ============= YEAR/MONTH SELECT SECTION ============= */
+.event-calendar-section:nth-child(1) { 
+    /* Layout */
+    width: 20%;
+
+    /* Design */
+    background-color: #1E1E1E;
+}
+
+#year-select {
+    /* Layout */
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+#year-select-text {
+    /* Layout */
+    text-align: center;
+
+    /* Design */
+    color: #FFFFFF;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.arrow {
+    /* Layout */
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    
+    /* Design */
+    font-size: 80px;
+    font-weight: 500;
+    color: #F6C526;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.25s ease-in-out;
+}
+
+.arrow:hover {
+    /* Design */
+    transform:scale(1.1);
+}
+
+.arrow:active {
+    /* Design */
+    transform:scale(1);
+    color:#B58F1C;
+}
+
+#month-select nav {
+    /* Layout */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    margin-top: 15px;
+    padding: 0px;
+
+    /* Design */
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.month-name{
+    /* Layout */
+    height: 35px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-left: 10px;
+    align-items: center;
+
+    /* Design */
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.month-name:hover{
+    /* Design */
+    background-color: #F6C526;
+}
+
+.month-name:active{
+    /* Design */
+    background-color: #B58F1C;
+}
+
+/* ============= CALENDAR SECTION ============= */
+.event-calendar-section:nth-child(2) {
+    /* Layout */
+    width: 55%;
+    justify-content: center;
+    align-items: center;
+
+    /* Design */
+    background-color: #292929;
+}
+
+.event-calendar-section:nth-child(2) header {
+    /* Layout */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+
+    /* Design */
+    color: #F6C526;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.event-calendar-section:nth-child(2) header hr {
+    /* Layout */
+    margin-top: 0;
+    width: 85%;
+
+    /* Design */
+    border-color:#F6C526;
+}
+
+#calendar {
+    /* Layout */
+    height: 478.72px; /* 85% of 55% of 1024px */
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.week-header {
+    /* Layout */
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.day-header {
+    /* Layout */
+    margin-top: 15px;
+    flex: 1; /* Sets width of each section to be equal */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+    /* Design */
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 300;    
+}
+
+.week {
+    /* Layout */
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.day {
+    /* Layout */
+    height: 100%;
+    flex: 1; /* Sets width of each section to be equal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+
+    /* Design */
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 300;
+    transition: all 0.0625s ease-in-out;
+}
+
+.day:hover {
+    /* Design */
+    border: 3px solid #F6C526;
+}
+
+.coolidge-clash {
+    /* Layout */
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-175%);
+
+    /* Design */
+    background-color: #0420B2;
+    border-radius: 50%;
+}
+
+.carried {
+    /* Layout */
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-175%);
+
+    /* Design  */
+    background-color: #EA228F;
+    border-radius: 50%;
+}
+
+/* ============= EVENT INFO SECTION ============= */
+.event-calendar-section:nth-child(3) {
+    /* Layout */
+    width: 25%;
+
+    /* Design */
+    background-color: #1E1E1E;
+}
+
+.event-calendar-section:nth-child(3) header {
+    /* Layout */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+
+    /* Design */
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+#event-info {
+    /* Layout */
+    display: inline-block;
+
+    /* Design */
+    background-image: url("../images/Coolidge_Clash_Background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#event-info h1 {
+    /* Layout */
+    margin-left: 25px;
+    margin-right: 25px;
+
+    /* Design */
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#event-info p {
+    /* Layout */
+    margin-left: 25px;
+    margin-right: 25px;
+
+    /* Design */
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#event-info hr {
+    /* Layout */
+    width: 85%;
+}
+
+#event-info a {
+    /* Design */
+    text-decoration: underline;
+}
+

@@ -1,0 +1,306 @@
+/* faq.css
+        Author:			Benjamin Wongmanee
+        Date Started:	4/13/23
+        Date Modified:	4/19/23
+        Assignment:		Semester Project
+        Purpose:		CSS for FAQ
+*/
+
+/* ========================= BODY ========================= */
+body {
+    /* Layout */
+    margin: 0px;
+
+    /* Design */
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    background-color: #353535;
+}
+
+
+
+/* ========================= SCROLLBAR ========================= */
+::-webkit-scrollbar {
+    /* Layout */
+    width: 20px;
+}
+::-webkit-scrollbar-thumb {
+    /* Design */
+    background-color: #4b4a4a;
+    border-radius: 100px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+::-webkit-scrollbar-track {
+    /* Design */
+    background: linear-gradient(180deg, #1E1E1E 0%, #292929 6.96%, #292929 93.27%, #1E1E1E 100%);
+}
+
+
+
+/* ========================= ANCHOR ELEMENTS ========================= */
+a{
+    /* Design */
+	color: inherit; /* links inherit the color from their parent */
+    text-decoration: none;
+}
+
+
+
+/* ========================= HAVE ANY QUESTIONS? SECTION ========================= */
+#question-search-section {
+    /* Layout */
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#question-search-section::before {
+    content: "";
+
+    /* Layout */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    /* Design */
+    background-image: url("../images/faq-background-image-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+}
+
+#question-search-section::after {
+    content: "";
+
+    /* Layout */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+
+    /* Design */
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+#question-search-section header {
+    /* Design */
+    font-size: 48px;
+    font-weight: 600;
+}
+
+#question-search {
+    /* Layout */
+    height: 40px;
+    width: 750px;
+    margin: 0 auto;
+
+    /* Design */
+    background: #565656;
+    border-radius: 10px;
+    border: none;
+    padding-left: 15px;
+    color: #FFFFFF;
+}
+
+
+
+/* ========================= FAQ SECTION ========================= */
+#faq-section {
+    /* Layout */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#topic-select {
+    /* Layout */
+    width: 25%;
+    height: 225px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+
+    /* Design */
+    font-size: 22px;
+    font-weight: 400;
+    background-color: #292929;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.topic {
+    /* Layout */
+    height: 35px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+
+    /* Design */
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.topic:hover {
+    background-color: #F6C526;
+}
+
+.topic:active {
+    background-color: #B58F1C;
+}
+
+#question-menu {
+    /* Layout */
+    width: 72.5%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Design */
+    background-color: #292929;
+    border-radius: 15px;
+}
+
+.accordion {
+    /* Layout */
+    max-width: 100%;
+}
+
+.accordion .contentBx {
+    /* Layout */
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion > .contentBx > .question {
+    /* Layout */
+    position: relative;
+    padding: 10px;
+
+    /* Design */
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.accordion > .contentBx > .question::before {
+    content: '+';
+
+    /* Layout */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+
+    /* Design */
+    font-size: 28px;
+}
+
+.accordion > .contentBx.active > .question::before {
+    content: '-';
+}
+
+.accordion > .contentBx > .content {
+    /* Layout */
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    overflow-y: auto;
+
+    /* Design */
+    background: #292929;
+    transition: 0.25s;
+}
+
+.accordion > .contentBx.active > .content {
+    /* Layout */
+    height: 150px;
+    padding: 10px;
+
+    /* Design */
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
+/* ========================= STILL HAVE QUESTIONS? SECTION ========================= */
+#contact-us-section {
+    /* Layout */
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-top: 0px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Design */
+    background: linear-gradient(to top, #1E1E1E 0%, #353535 100%);
+}
+
+#contact-us-section header {
+    /* Design */
+    font-size: 36px;
+    font-weight: 500;
+}
+
+#contact-us-section p {
+    /* Layout */
+    width: 50%;
+    text-align: center;
+    
+    /* Design */
+    font-size: 18px;
+}
+
+#contact-us-button {
+    /* Layout */
+    height: 42px;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+
+    /* Design */
+    font-size: 20px;
+    color: #FFFFFF;
+    background: #273BEC;
+    border-radius: 25px;
+    border: none;
+    transition: all 0.25s ease-in-out;
+}
+
+#contact-us-button:hover {
+    /* Design */
+    cursor: pointer;
+}
+
+#contact-us-button:active {
+    /* Design */
+    background-color:#2132c7;
+}
