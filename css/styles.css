@@ -1,0 +1,286 @@
+/* 
+    Author: Autumn Harrison
+    Date: 04.17.23
+    Last Modified: 04.17.23
+    Purpose: CSS for About Page 
+*/
+
+body {
+    background-color: #353535;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#navitem:hover{       /* when links are hovered */
+    color:#4AACE1;
+    transition: 0.5s;
+}
+
+#navitemimg:hover{
+    transform: scale(1.1);
+}
+
+/*Hero image stuff */
+#herocontents {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#herocontents img {
+    max-width: 100%;
+    height: auto;
+    background-position: center top;
+}
+
+.hero-text h1 {
+    display: block;
+    font-family: Poppins;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 300px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    font-size: 100px; /* adjust the font size as needed */
+}
+
+#herocontents p {
+    display: block;
+    position: absolute;
+    color: white;
+    font-family: Poppins;
+    margin: auto;
+    top: 65%;
+    left: 50%;
+    font-style: normal;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    line-height: 30px;
+
+}
+
+/*Mission Statement Stuff ... Second Page Content */
+#missionInfo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    max-width: 100%;
+
+}
+
+.mission-text h2 {
+    display: block;
+    position: absolute;
+    color: white;
+    font-family: Poppins;
+    transform: translate(-50%, -50%);
+    padding: auto;
+    font-size: 40px;
+    margin-top: 6%;
+    line-height: 25px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+}
+
+.mission-text p {
+    display: block;
+    position: absolute;
+    font-family: Poppins;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    line-height: 1.5;
+    font-stretch: expanded;
+    margin-top: 16%;
+    padding: 15px 20px; 
+    text-align: center;
+    width: 60%;
+
+}
+
+/*Join Button*/
+#joinButton {
+    text-align: center;
+    margin-top: 25%;
+    font-family: Poppins;
+    padding: 10px 20px;
+    border: none;
+}
+  
+#joinButton a {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 35px;
+  color: #fff;
+  background-color: #1126e9;
+  text-decoration: none;
+  transition: 0.75s;
+  border-radius: 100px;
+}
+  
+#joinButton a:hover {
+    background-color: #4AACE1;
+    cursor: pointer;
+}
+  
+
+  /*3 Images aka Sectional Info */
+
+#sectionalInformation {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.section {
+    height: 400px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.section img {
+    position: absolute;
+    object-fit: contain;
+    height: 100px;
+    width: 100px;
+    transform: translateY(-100%);
+    flex: 1;
+
+} 
+
+.section h2 {
+    font-family: Poppins;
+    font-weight: lighter;
+    color: white;
+    font-size: 30px;
+    margin-top: 28%; /* Adjust the value to your desired distance */
+}
+
+.section p {
+    font-family: Poppins;
+    font-weight: lighter;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 15px;
+    width: 75%;
+}
+
+#fairplay {
+    background-image: url("../images/fairplayimage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#inclusivity {
+    background-image: url("../images/inclusivityimage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#community {
+    background-image: url("../images/communityimage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+  /*Bottom Content */
+
+  .bottomContent {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .bottomContent h2 {
+    color: white;
+    font-family: Poppins;
+    padding: auto;
+    font-size: 40px;
+    margin-top: 6%;
+    line-height: 25px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .bottomContent p {
+    font-family: Poppins;
+    color: white;
+    font-size: 30px;
+    line-height: 1.5;
+    margin-top: 20px;
+    padding: 10px 10%;
+    text-align: center;
+    width: 80%;
+  }
+  
+  .bottomContent video {
+    width: 1280px;
+    height: 720px;
+    margin-top: 20px;
+    background-color: #1126e9;
+  }
+
+  .bottomContent video:not(:hover) {
+    box-shadow:0px 0px 30px 5px #1126e9;
+    transition: filter 0.5s ease-in-out;
+  }
+
+  .bottomContent video:hover {
+    border:rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease-in-out;
+    filter: brightness(90%);
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 0px 30px 5px #4AACE1;
+    cursor: pointer;
+
+  }
+
+
+
+/*Stuff for Responsive Site */
+@media only screen and (max-width: 600px) {
+    /* Adjust header size and position */
+    #header {
+      height: 50px;
+      position: relative;
+    }
+    
+    /* Adjust hero text size and position */
+    .hero-text h1 {
+      font-size: 36px;
+      line-height: 150%;
+      top: 20%;
+    }
+    
+    .hero-text p {
+      font-size: 24px;
+      top: 60%;
+    }
+}
+
