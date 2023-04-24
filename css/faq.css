@@ -53,7 +53,7 @@ a{
     position: relative;
     width: 100%;
     height: 200px;
-    margin-top: 80px;
+    margin-top: 95px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,14 +95,13 @@ a{
 
 #question-search-section header {
     /* Design */
-    font-size: 48px;
+    font-size: 4vw;
     font-weight: 600;
 }
 
 #question-search {
     /* Layout */
     height: 40px;
-    width: 750px;
     margin: 0 auto;
 
     /* Design */
@@ -111,6 +110,21 @@ a{
     border: none;
     padding-left: 15px;
     color: #FFFFFF;
+    transition: width 1s ease-in-out;
+}
+
+@media (max-width: 900px){
+    #question-search {
+        /* Layout */
+        width: 500px;
+    }
+}
+
+@media (min-width: 900px){
+    #question-search {
+        /* Layout */
+        width: 750px;
+    }
 }
 
 
@@ -118,45 +132,98 @@ a{
 /* ========================= FAQ SECTION ========================= */
 #FAQ-section {
     /* Layout */
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-right: 100px;
-    margin-left: 100px;
     height: auto;
     width: auto;
     display: flex;
-    flex-direction: row;
+
+    /* Design */
+    transition: flex-direction 1s ease-in-out;
+}
+
+@media (max-width: 900px) {
+    #FAQ-section {
+        /* Layout */
+        margin-top: 25px;
+        margin-bottom: 50px;
+        margin-right: 50px;
+        margin-left: 50px;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 900px) {
+    #FAQ-section {
+        /* Layout */
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 100px;
+        margin-left: 100px;
+        flex-direction: row;
+    }
 }
 
 #topic-select {
     /* Layout */
-    width: 25%;
-    height: 225px;
-    margin-right: 10px;
+    height: 100%;
     display: flex;
-    flex-direction: column;
 
     /* Design */
-    font-size: 22px;
     font-weight: 400;
     background-color: #292929;
     border-radius: 15px;
     overflow: hidden;
 }
 
+@media (max-width: 900px) {
+    #topic-select {
+        /* Layout */
+        width: 100%;
+        flex-direction: row;
+        margin-bottom: 25px;
+
+        /* Design */
+        font-size: 2vw;
+    }
+}
+
+@media (min-width: 900px) {
+    #topic-select {
+        /* Layout */
+        width: 25%;
+        margin-right: 10px;
+        flex-direction: column;
+
+        /* Design */
+        font-size: 22px;
+    }
+}
+
 .topic {
     /* Layout */
-    height: 35px;
-    width: 100%;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 5px;
-    padding-left: 15px;
     padding-bottom: 5px;
 
     /* Design */
     cursor: pointer;
     transition: all 0.25s ease-in-out;
+}
+
+@media (max-width: 900px){
+    .topic {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media (min-width: 900px) {
+    .topic {
+        padding-left: 15px;
+        height: 35px;
+        width: 100%;
+    }
 }
 
 .topic:hover {
@@ -169,8 +236,6 @@ a{
 
 #question-menu {
     /* Layout */
-    width: 72.5%;
-    margin-left: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,6 +244,21 @@ a{
     /* Design */
     background-color: #292929;
     border-radius: 15px;
+}
+
+@media (max-width: 900px) {
+    #question-menu {
+        /* Layout */
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    #question-menu {
+        /* Layout */
+        width: 72.5%;
+        margin-left: 10px;
+    }
 }
 
 .accordion {
@@ -200,7 +280,18 @@ a{
     /* Design */
     color: #FFFFFF;
     cursor: pointer;
-    font-size: 20px;
+}
+
+@media (max-width: 900px) {
+    .accordion > .contentBx > .question {
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width: 900px) {
+    .accordion > .contentBx > .question {
+        font-size: 20px;
+    }
 }
 
 .accordion > .contentBx > .question::before {
@@ -238,8 +329,19 @@ a{
     padding: 10px;
 
     /* Design */
-    font-size: 16px;
     font-weight: 400;
+}
+
+@media (max-width: 900px) {
+    .accordion > .contentBx.active > .content {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width: 900px) {
+    .accordion > .contentBx.active > .content {
+        font-size: 16px;
+    }
 }
 
 
@@ -278,7 +380,7 @@ a{
 
 #contact-us-button {
     /* Layout */
-    height: 42px;
+    height: 6vh;
     width: auto;
     margin-top: 10px;
     margin-bottom: 10px;
