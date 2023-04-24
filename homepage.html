@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+		<title>Outplay Gaming Homepage</title>
+		<meta name="author" content="kinsley">
+		<meta name="keywords" content="esports,local esports, outplay, outplay gaming, gaming, games, competitive games, competitive">
+		<meta name="description" content="Outplay Gaming is a local esports group.">
+
+		<link rel="icon" href="images/favicon.png">
+		<link rel="stylesheet" href="css/homepage.css">
+
+						<!--
+						owner: kinsley c
+						created: 4/10/23
+						last edited: 4/24/23
+						-->
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+		<script> // load header and footer in page
+			function loadHeaderAndFooter() {
+				var xhrHeader = new XMLHttpRequest();
+				var xhrFooter = new XMLHttpRequest();
+
+				xhrHeader.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("header").innerHTML = this.responseText;
+					}
+				};
+
+				xhrFooter.onreadystatechange = function () {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("footer").innerHTML = this.responseText;
+					}
+				};
+
+				xhrHeader.open("GET", "header.html", true);
+				xhrHeader.send();
+
+				xhrFooter.open("GET", "footer.html", true);
+				xhrFooter.send();
+			}			
+		</script>
+
+		  <script>      // makes animations appear on scroll from: https://alvarotrigo.com/blog/css-animations-scroll/
+			function reveal() {
+			var reveals = document.querySelectorAll(".reveal");
+
+			for (var i = 0; i < reveals.length; i++) {
+				var windowHeight = window.innerHeight;
+				var elementTop = reveals[i].getBoundingClientRect().top;
+				var elementVisible = 150;
+
+				if (elementTop < windowHeight - elementVisible) {
+				reveals[i].classList.add("active");
+				} else {
+				reveals[i].classList.remove("active");
+				}
+			}
+		}
+
+		window.addEventListener("scroll", reveal);
+		  </script> 
+
+	</head>
+	<body onload="loadHeaderAndFooter()">
+		#include <header.html>
+		<div id="header"></div>
+
+		<div class="discord slidedown" style="background-image: url(images/homepage/discordbg.png); background-attachment: scroll; position: sticky;">
+			<img class="slideleft discordchara" src="images/homepage/discordchara.png" alt="Mario and Luigi">
+			<div class="discordh1 slideright">
+				<h1>Making Gaming Fun <br> and Accessible</h1>
+				<h2 style="margin-right: 30px; font-size: 35px; margin-top: -25px;">Join our Discord</h2>
+			</div>
+			<div class="discordbutton" id="buttonid">
+				<img class="discordbuttontext"  src="images/homepage/discordicon.png" alt="Discord Icon" style="height: auto; width: 25%; margin-right: 10px;" >
+				<a class="discordbuttontext"  href="https://www.discord.com" target="_blank"> <h3> Discord </h3> </a>
+			</div>
+		</div>
+
+		<div class="aboutus reveal fade-bottom" style="background-image: url(images/homepage/aboutusbg.png);background-attachment: scroll; height:700px;">
+			<img class="reveal fade-bottom" src="images/homepage/aboutuschara.png" alt="May" style="height: auto; width: 45%; margin-left: 10px; float: left; padding-top: 50px;">
+			<div class="aboutustext reveal fade-top">
+				<h1>Bringing Esports to Chattanooga</h1>
+				<h2 style="margin-top: -30px; font-size: 35px; margin-left: -40px;">Find out more about our mission</h2>
+			</div>
+			<div class="aboutusbutton" id="buttonid">
+				<a style="filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));" href="aboutus.html" target="_self"> <h3> About Us </h3> </a>
+			</div>
+		</div>
+
+		<div class="events reveal fade-bottom" style="background-image: url(images/homepage/eventbg.png); background-attachment: scroll; height: 700px; z-index: -1;">
+			<img class="eventchara reveal fade-right" src="images/homepage/eventchara.png" alt="Neon">
+			<div class="eventtext  reveal fade-left">
+				<h1>Come Join Us!</h1>
+				<h2 style="margin-top: -30px; font-size: 35px;">Find out more about our events</h2>
+			</div>
+			
+			<div class="eventbutton  reveal fade-left" id="buttonid">
+				<a style="filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));" href="events.html" target="_self"> <h3> Events </h3> </a>
+			</div>
+		</div>
+
+		<div class="rentals reveal fade-bottom" style="background-image: url(images/homepage/rentalsbg.png);">
+			<div class="rentaltext reveal fade-bottom">
+				<h2 style="font-size: 35px;">Want to host your own event?</h2>
+				<h1>Rent From Us!</h1>
+				<h2 style="font-size: 35px;">We bring the equipment, you bring the fun!</h2>
+			</div>
+			<div class="rentalbutton reveal fade-bottom" id="buttonid">
+				<a style="filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));" href="rentals.html" target="_self"><h3>Rentals</h3></a>
+			</div>
+		</div> 
+
+		<div class="pastevents">
+			<div class="pasteventstext reveal fade-top"> <!-- slideshow/ carousel from: https://codepen.io/YousifW/pen/LKBxZX -->
+				<h1>Photos from Past Events</h1>
+			</div>
+			<div class="photos reveal fade-bottom">
+				<div class="photo active">
+				<img src="/images/homepage/prevevents1.jpg" alt="previous event photo 1">
+				</div>
+
+				<div class="photo next">
+				<img src="/images/homepage/prevevents2.jpg" alt="previous event photo 2">
+				</div>
+
+				<div class="photo">
+				<img src="/images/homepage/prevevents3.jpg" alt="previous event photo 3">
+				</div>
+
+				<div class="photo">
+				<img src="/images/homepage/prevevents4.jpg" alt="previous event photo 4">
+				</div>
+				
+				<div class="photo">
+				<img src="/images/homepage/prevevents5.jpg" alt="previous event photo 5">
+				</div>
+
+				<div class="photo prev">
+				<img src="/images/homepage/prevevents6.jpg" alt="previous event photo 6">
+				</div>
+
+				<div class="swipebuttons">
+				<div id="button" class="reveal fade-right"onclick="gotoPrev()">
+					<div id="swipebuttontext" style="margin-left: 46px;">
+					<
+					</div>
+				</div>
+				<div id="button" class="reveal fade-left" onclick="gotoNext()">
+					<div id="swipebuttontext" style="margin-left: 52px;">
+					>
+				</div>
+				</div>
+			  </div>
+			</div>
+			
+		</div>
+		<div id="footer"></div>
+		
+		<script src="/js/w3c.js"></script>
+		
+		<script> // photo carousel code from: https://codepen.io/YousifW/pen/LKBxZX 
+
+			const slider = document.querySelector(".photos");
+			const slides = document.querySelectorAll(".photo");
+			const button = document.querySelectorAll(".button");
+
+			let current = 0;
+			let prev = 5; // 1 - # of pictures. make sure to update this in other spots
+			let next = 1;
+
+			for (let i = 0; i < button.length; i++) {
+				button[i].addEventListener("click", () => i == 0 ? gotoPrev() : gotoNext());
+			}
+
+			const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
+
+			const gotoNext = () => current < 5 ? gotoNum(current + 1) : gotoNum(0);
+
+			const gotoNum = number => {
+				current = number;
+				prev = current - 1;
+				next = current + 1;
+
+				for (let i = 0; i < slides.length; i++) {
+					slides[i].classList.remove("active");
+					slides[i].classList.remove("prev");
+					slides[i].classList.remove("next");
+				}
+
+				if (next == 6) {
+					next = 0;
+				}
+
+				if (prev == -1) {
+					prev = 5;
+				}
+
+				slides[current].classList.add("active");
+				slides[prev].classList.add("prev");
+				slides[next].classList.add("next");
+			}
+		</script>
+		
+	</body>
+</html>
