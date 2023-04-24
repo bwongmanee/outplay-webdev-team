@@ -1,71 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Header</title>
-		<meta name="author" content="Kinsley Crowdis">
-		<meta name="description" content="CSCI 1210 Web Design">
-		<meta name="keywords" content="CSCI 1210, web, design">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap">
+<html>
+						<!--
+						owner: kinsley c
+						created: 4/10/23
+						last edited: 4/22/23
+						-->
+<style>
+		a{
+			color:inherit;
+			text-decoration: none;			
+		}
 
-        <style>
-            #header {
-                font-family: 'Roboto', sans-serif;
-                position: fixed;
-                width: 100%;
-                height: 100px;
-                top: 0px;
-                z-index: 100;  /* makes it so it stays ontop of other elements when scrolling */
-                box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
-                background: linear-gradient(180deg, #1E1E1E 0%, #353535 100%);
-                border-bottom: 2px solid #F6C526;
-            }
+		#header{
+			font-family: 'Roboto', sans-serif;
+			position: fixed;
+			width: 100%;
+			height: 80px;
+			padding-left: 10px;
+			top: 0px;
+			z-index: 100;  /* makes it so it stays ontop of other elements when scrolling*/
+			box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+			background: linear-gradient(180deg, #1E1E1E 0%, #353535 80%); 
+			border-bottom: 2px solid #F6C526;
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+		
+		#navitemimg{ /* image in header */
+			transition: all 277ms cubic-bezier(0.16, 0.2, 0.77, 1);
+			position:absolute;
+			top: 10px;
+			margin-left: 250px;
+			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		}
 
-            a {                    /* makes links inherit color of parent (.navitem) and gets rid of underline*/
-                color: inherit;
-                text-decoration: none;
-            } 
+		#navitemimg:hover{   /* when img is hovered */
+			transform: scale(1.1);
+		}
 
-            .navitem {               /* links in header */
-                display: block;
-                position: relative;
-                left: -250px;
-                bottom: -10px;
-                list-style-type: none;
-                font-size: 25px;
-                padding: 20px;
-                float: right;
-                color: #FFFFFF;
-            }
+		#navitem {               /* links in header */
+			display: block;
+			float: left;
+			position: relative;
+			top: -5px;
+			left: 400px;
+			list-style-type: none;
+			font-size: 20px;
+			padding: 20px;
+			color: white;
+			transition: 400ms;
+		}
 
-            .navitem a:active {           /*When link is selected?*/
-                color: #F6C526;
-            }
-
-            .navitem a:hover {       /* when links are hovered */
-                color:#4AACE1;
-                transition: 0.5s;
-            }
-
-            .navitemimage a:hover {
-                transform: scale(1.1);
-            }
-        </style>
-    </head>
-
-    <body>
-        <div id="header">
-            <ul>
-                <a class="navitemimg" href="homepage.html"> <img src="images/Outplay_Gaming_Minimalist_Logo.png" alt="Outplay Gaming Logo" style="height:90px; position: relative; top: -10px;"></a>
-                <li class="navitem"><a href="faq.html">FAQ</a></li>
-                <li class="navitem"><a href="rentals.html">Rentals</a></li>
-                <li class="navitem"><a href="merch.html">Merch</a></li>
-                <li class="navitem"><a href="events.html">Events</a></li>
-                <li class="navitem"><a href="aboutus.html">About Us</a></li>
-            </ul>
-        </div>
-    </body>
-</html>
-
+		#navitem:hover{                 /* when links are hovered */
+			color: #4aace1;
+			transform: translateY(-3px);
+			transition: 400ms cubic-bezier(.13,.7,.57,.99);
+		} 
+	</style>
+	<body>
+		<nav id="header">
+			<a id="navitemimg" href="homepage.html"> <img src="images/Outplay_Gaming_Minimalist_Logo.png" alt="Outplay Gaming Logo" style="height:60px; width: auto;"></a>
+			<ul>
+				<li class="underline"id="navitem"><a href="aboutus.html">About Us</a></li>
+				<li class="underline" id="navitem"><a href="events.html">Events</a></li>
+				<li class="underline" id="navitem"><a href="merch.html">Merch</a></li>
+				<li class="underline" id="navitem"><a href="rentals.html">Rentals</a></li>
+				<li class="underline" id="navitem"><a href="faq.html">FAQ</a></li>
+			</ul>		
+		</nav>
+	</body>
+	</html>
