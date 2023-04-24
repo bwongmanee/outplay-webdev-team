@@ -1,0 +1,404 @@
+/*
+owner: kinsley c
+created: 4/10/23
+last edited: 4/24/23
+*/
+
+::-webkit-scrollbar { /* how big scrollbar is */
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4b4a4a;
+    border-radius: 100px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+	
+}
+
+::-webkit-scrollbar-track {
+	background: linear-gradient(180deg, #1E1E1E 0%, #292929 6.96%, #292929 93.27%, #1E1E1E 100%);
+}
+
+
+a{
+	color:inherit;
+	text-decoration: none;
+	
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+	margin: 0px;
+	background: #353535;
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+}
+
+h1{
+	font-weight: 400;
+}
+
+h2,h3{
+	font-weight: 300;
+	color: white;
+}
+
+
+#buttonid:hover{
+	background:#353535;
+	transform: scale(1.1);
+}
+
+.discord{
+	width: 100%;
+	height: 700px;
+	padding-top: -400px;
+	color: white;
+	padding-left: 50px;
+	margin: 0;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	transition: 0.5s;
+}
+
+.discordchara{
+	height: auto;
+	width: 48%;
+	padding-top: 175px; 
+	padding-right: 150px;
+	float: right;
+}
+.discordh1{
+
+	-webkit-text-stroke: 1px solid rgba(0, 0, 0, 0.3);
+	padding-right: 600px;
+	padding-top: 200px;
+	font-size: 25px;
+	line-height: 60px;
+	text-align: center;	
+	align-items: center;
+
+}
+
+.discordbutton{
+	margin-left: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+	background: #F6C526;
+	border-radius: 100px;
+	max-width: 220px;
+	height: 60px;
+	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+	transition: 0.5s;
+}
+
+.aboutus{
+	color: white;
+	width: 100%;
+	height: 700px;
+	margin: 0;
+}
+
+.aboutustext{
+	position: absolute;
+	right: 180px;
+	padding-top: 180px;
+	font-size: 25px;
+	line-height: 60px;
+	text-align: center;	
+	align-items: center;
+	-webkit-text-stroke: 1px solid rgba(0, 0, 0, 0.5);
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+	
+}
+
+.aboutusbutton{
+	position: relative;
+	left: -42px;
+	top: 360px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+	background: #4AACE1;
+	border-radius: 100px;
+	max-width: 220px;
+	height: 60px;
+	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+	transition: 0.5s;
+
+}
+
+.events{
+	color: white;
+	width: 100%;
+	height: 700px;
+	padding-left: 90px;
+	padding-bottom: 50px;
+	margin: 0;
+	z-index: -1;
+}
+
+.eventchara{
+	height: auto; 
+	width: 53%; 
+	padding-right: 50px; 
+	float: right; 
+	padding-top: 20px;
+}
+
+.eventtext{
+	-webkit-text-stroke: 1px solid rgba(0, 0, 0, 0.3);
+	padding-top: 200px;
+	font-size: 25px;
+	line-height: 60px;
+	text-align: center;	
+	align-items: center;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.eventbutton{
+	margin-left: 155px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+	background: #F6C526;
+	border-radius: 100px;
+	max-width: 220px;
+	height: 60px;
+	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+	transition: 0.5s;
+}
+
+.rentals{
+	color: white;
+	height: 700px;
+	width: 100%;
+	padding-top: 50px;
+}
+
+.rentaltext{
+	-webkit-text-stroke: 1px solid rgba(0, 0, 0, 0.3);
+	padding-top: 100px;
+	font-size: 25px;
+	line-height: 40px;
+	text-align: center;	
+	align-items: center;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.rentalbutton{
+	margin-left: 525px;
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	background: #4AACE1;
+	border-radius: 100px;
+	max-width: 220px;
+	height: 60px;
+	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+	transition: 0.5s;
+}
+
+.pastevents{
+	width: auto;
+	height: 550px;
+}
+
+.pasteventstext{
+	-webkit-text-stroke: 1px solid rgba(0, 0, 0, 0.3);
+	margin-top: 35px;
+	color: white;
+	margin-left: 375px;
+	font-size: 20px;
+}
+
+
+/* photo carousel code from: https://codepen.io/YousifW/pen/LKBxZX  with modifications by me*/
+
+.photos{
+	position: absolute;
+	margin-top: 25px;
+	margin-left: 375px;
+	user-select: none;
+}
+
+.photos .photo{
+  position: absolute;
+  width: 500px;
+  height: auto;
+  transition: all 450ms cubic-bezier(.13,.65,.3,.92);
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+}
+
+.photo img {
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.photo.active {
+	opacity: 1;
+	z-index: 99;
+	transition: all 450ms cubic-bezier(.13,.65,.3,.92);
+	transform: scale(1.1);
+  }
+
+  .photo.prev {
+	z-index: 2;
+	opacity: 1;
+	margin-left: 200px;
+	opacity: .5;
+  }
+  
+  .photo.next {
+	z-index: 2;
+	opacity: 1;
+	margin-left: -200px;
+	opacity: .5;
+  }
+  
+  .photos .swipebuttons{
+	position: absolute;
+	top: 50%;
+	left: -175px;
+	transform: translate(-50%, -50%);
+	width: 275px;
+	z-index: 100;
+  }
+  
+  #swipebuttontext{
+	margin-top: 50px;
+	font-size: 50px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
+  }
+
+  .swipebuttons #button {
+	color: #fff;
+	font-size: 32px;
+	cursor: pointer;
+	margin-left: 100px;
+	position: relative;
+	margin: -700px;
+	margin-bottom: 100px;
+	transition: all 1s cubic-bezier(.13,.7,.57,.99);
+	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+  }
+  
+ #button:hover {
+	transform: scale(1.1);
+  }
+  
+  .swipebuttons #button:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	background-color: #4AACE1;
+	border-radius: 50%;
+	z-index: -99;
+  }
+  
+  .swipebuttons #button:nth-child(1) {
+	float: left;
+	margin-left: 100px;
+	margin-top: 400px;
+
+  }
+  
+  .swipebuttons #button:nth-child(2) {
+	float: right;
+	margin-top: 400px;
+  }
+
+/*  animation when user scrolls to reveal. from: https://alvarotrigo.com/blog/css-animations-scroll/ with modifications by me */
+.reveal {
+	opacity: 0;
+  }
+   
+  .reveal.active {
+	opacity: 1;
+  }
+  
+  .slidedown{
+	animation: fade-top 1s cubic-bezier(.13,.7,.57,.99) ; /* graph/cubic bezier from https://cubic-bezier.com/ created by me */
+  }
+
+  .slideleft{
+	animation: fade-left 1s cubic-bezier(.13,.7,.57,.99);
+  }
+
+  .slideright{
+	animation: fade-right 1s cubic-bezier(.13,.7,.57,.99);
+  }
+
+  .active.fade-bottom{
+	animation: fade-bottom 1s cubic-bezier(.13,.7,.57,.99);
+  }
+  .active.fade-left{
+	animation: fade-left 1s cubic-bezier(.13,.7,.57,.99);
+  }
+  .active.fade-right{
+	animation: fade-right 1s cubic-bezier(.13,.7,.57,.99);
+  }
+  .active.fade-top{
+	animation: fade-top 1s cubic-bezier(.13,.7,.57,.99);
+  }
+
+
+
+  @keyframes fade-top{
+	0%{
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+  }
+  @keyframes fade-bottom {
+	0% {
+	  transform: translateY(50px);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+  @keyframes fade-left {
+	0% {
+	  transform: translateX(-100px);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+  
+  @keyframes fade-right {
+	0% {
+	  transform: translateX(100px);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
