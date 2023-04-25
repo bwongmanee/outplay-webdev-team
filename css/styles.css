@@ -48,12 +48,12 @@ body {
     color: white;
     font-style: normal;
     font-weight: 600;
-    line-height: 300px;
-    top: 25%;
+    line-height: 50px;
+    top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 100%;
-    font-size: 100px; /* adjust the font size as needed */
+    font-size: 64px; /* adjust the font size as needed */
 }
 
 #herocontents p {
@@ -62,11 +62,11 @@ body {
     color: white;
     font-family: Poppins;
     margin: auto;
-    top: 65%;
+    top: 75%;
     left: 50%;
     font-style: normal;
     transform: translate(-50%, -50%);
-    font-size: 40px;
+    font-size: 25px;
     line-height: 30px;
 
 }
@@ -88,9 +88,9 @@ body {
     font-family: Poppins;
     transform: translate(-50%, -50%);
     padding: auto;
-    font-size: 40px;
+    font-size: 32px;
     margin-top: 6%;
-    line-height: 25px;
+    line-height: 15px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 
@@ -102,7 +102,7 @@ body {
     font-family: Poppins;
     color: white;
     transform: translate(-50%, -50%);
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1.5;
     font-stretch: expanded;
     margin-top: 16%;
@@ -117,14 +117,16 @@ body {
     text-align: center;
     margin-top: 25%;
     font-family: Poppins;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border: none;
 }
   
 #joinButton a {
   display: inline-block;
-  padding: 15px 30px;
-  font-size: 35px;
+  padding: 25px 45px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 24px;
   color: #fff;
   background-color: #1126e9;
   text-decoration: none;
@@ -143,13 +145,13 @@ body {
 #sectionalInformation {
     width: 100%;
     margin-top: 10%;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: row;
 }
 
 .section {
-    height: 400px;
+    height: 375px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -162,10 +164,11 @@ body {
 .section img {
     position: absolute;
     object-fit: contain;
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
     transform: translateY(-100%);
     flex: 1;
+    padding-bottom: 15px;
 
 } 
 
@@ -173,7 +176,7 @@ body {
     font-family: Poppins;
     font-weight: lighter;
     color: white;
-    font-size: 30px;
+    font-size: 24px;
     margin-top: 28%; /* Adjust the value to your desired distance */
 }
 
@@ -181,7 +184,7 @@ body {
     font-family: Poppins;
     font-weight: lighter;
     color: white;
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
     padding-left: 30px;
     padding-right: 30px;
@@ -221,7 +224,7 @@ body {
     color: white;
     font-family: Poppins;
     padding: auto;
-    font-size: 40px;
+    font-size: 32px;
     margin-top: 6%;
     line-height: 25px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -230,7 +233,7 @@ body {
   .bottomContent p {
     font-family: Poppins;
     color: white;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1.5;
     margin-top: 20px;
     padding: 10px 10%;
@@ -239,8 +242,8 @@ body {
   }
   
   .bottomContent video {
-    width: 1280px;
-    height: 720px;
+    width: 640px;
+    height: 360px;
     margin-top: 20px;
     background-color: #1126e9;
   }
@@ -263,7 +266,10 @@ body {
 
 
 
-/*Stuff for Responsive Site */
+/*Appropriate CSS Styling Needed for Responsive Site */
+
+
+/*Mobile Devices (iPhone, iPad) */
 @media only screen and (max-width: 600px) {
     /* Adjust header size and position */
     #header {
@@ -284,3 +290,4 @@ body {
     }
 }
 
+/*Larger Devices (PC, Television) */
