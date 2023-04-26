@@ -1,7 +1,7 @@
 /*
 owner: kinsley c
 created: 4/10/23
-last edited: 4/24/23
+last edited: 4/25/23
 */
 
 ::-webkit-scrollbar { /* how big scrollbar is */
@@ -20,10 +20,6 @@ last edited: 4/24/23
 	background: linear-gradient(180deg, #1E1E1E 0%, #292929 6.96%, #292929 93.27%, #1E1E1E 100%);
 }
 
-html{
-	max-width: 125000rem;
-	min-width: 1000px;
-}
 
 a{
 	color:inherit;
@@ -60,7 +56,7 @@ h2,h3{
 
 .discord{
 	width: 100%;
-	height: 43.75rem;
+	height: 700px;
 	padding-top: -400px;
 	color: white;
 	padding-left: 50px;
@@ -71,12 +67,14 @@ h2,h3{
 
 .discordchara{
 	height: auto;
-	width: 48%;
+	width: 600px;
 	padding-top: 175px; 
 	padding-right: 150px;
 	float: right;
 }
 .discordh1{
+
+	-webkit-text-stroke: 1px solid rgba(0, 0, 0, 0.3);
 	padding-right: 600px;
 	padding-top: 200px;
 	font-size: 25px;
@@ -103,7 +101,7 @@ h2,h3{
 .aboutus{
 	color: white;
 	width: 100%;
-	height: 43.75rem;
+	height: 700px;
 	margin: 0;
 }
 
@@ -115,6 +113,7 @@ h2,h3{
 	line-height: 60px;
 	text-align: center;	
 	align-items: center;
+	-webkit-text-stroke: 1px solid rgba(0, 0, 0, 0.5);
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
 	
 }
@@ -139,7 +138,7 @@ h2,h3{
 .events{
 	color: white;
 	width: 100%;
-	height: 43.75rem;
+	height: 700px;
 	padding-left: 90px;
 	padding-bottom: 50px;
 	margin: 0;
@@ -148,13 +147,14 @@ h2,h3{
 
 .eventchara{
 	height: auto; 
-	width: 53%; 
+	width: 650px; 
 	padding-right: 50px; 
 	float: right; 
 	padding-top: 20px;
 }
 
 .eventtext{
+	-webkit-text-stroke: 1px solid rgba(0, 0, 0, 0.3);
 	padding-top: 200px;
 	font-size: 25px;
 	line-height: 60px;
@@ -179,12 +179,13 @@ h2,h3{
 
 .rentals{
 	color: white;
-	height: 43.75rem;
+	height: 700px;
 	width: 100%;
 	padding-top: 50px;
 }
 
 .rentaltext{
+	-webkit-text-stroke: 1px solid rgba(0, 0, 0, 0.3);
 	padding-top: 100px;
 	font-size: 25px;
 	line-height: 40px;
@@ -211,9 +212,11 @@ h2,h3{
 .pastevents{
 	width: auto;
 	height: 550px;
+
 }
 
 .pasteventstext{
+	-webkit-text-stroke: 1px solid rgba(0, 0, 0, 0.3);
 	margin-top: 35px;
 	color: white;
 	margin-left: 375px;
@@ -282,23 +285,23 @@ h2,h3{
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
   }
 
-  .swipebuttons #photobutton {
+  .swipebuttons #button {
 	color: #fff;
 	font-size: 32px;
 	cursor: pointer;
 	margin-left: 100px;
 	position: relative;
-	margin: -43.75rem;
+	margin: -700px;
 	margin-bottom: 100px;
 	transition: all 1s cubic-bezier(.13,.7,.57,.99);
 	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
   }
   
- #photobutton:hover {
+ #button:hover {
 	transform: scale(1.1);
   }
   
-  .swipebuttons #photobutton:before {
+  .swipebuttons #button:before {
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -310,17 +313,18 @@ h2,h3{
 	z-index: -99;
   }
   
-  .swipebuttons #photobutton:nth-child(1) {
+  .swipebuttons #button:nth-child(1) {
 	float: left;
 	margin-left: 100px;
 	margin-top: 400px;
 
   }
   
-  .swipebuttons #photobutton:nth-child(2) {
+  .swipebuttons #button:nth-child(2) {
 	float: right;
 	margin-top: 400px;
   }
+
 
 /*  animation when user scrolls to reveal. from: https://alvarotrigo.com/blog/css-animations-scroll/ with modifications by me */
 .reveal {
