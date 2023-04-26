@@ -2,66 +2,19 @@
 						<!--
 						owner: kinsley c
 						created: 4/10/23
-						last edited: 4/23/23
+						last edited: 4/25/23
 						-->
-<style>
-		a{
-			color:inherit;
-			text-decoration: none;			
-		}
+<head>
+	<link rel="stylesheet" href="css/header.css">
+</head>
 
-		#header{
-			font-family: 'Roboto', sans-serif;
-			position: fixed;
-			width: 100%;
-			height: 80px;
-			padding-left: 10px;
-			top: 0px;
-			z-index: 100;  /* makes it so it stays ontop of other elements when scrolling*/
-			box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
-			background: linear-gradient(180deg, #1E1E1E 0%, #353535 80%); 
-			border-bottom: 2px solid #F6C526;
-			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-		}
-		
-		#navitemimg{ /* image in header */
-			transition: all 277ms cubic-bezier(0.16, 0.2, 0.77, 1);
-			position:absolute;
-			top: 10px;
-			margin-left: 250px;
-			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-		}
-
-		#navitemimg:hover{   /* when img is hovered */
-			transform: scale(1.1);
-		}
-
-		#navitem {               /* links in header */
-			display: block;
-			float: left;
-			position: relative;
-			top: -5px;
-			left: 400px;
-			list-style-type: none;
-			font-size: 20px;
-			padding: 20px;
-			color: white;
-			transition: 400ms;
-		}
-
-		#navitem:hover{                 /* when links are hovered */
-			color: #4aace1;
-			transform: translateY(-3px);
-			transition: 400ms cubic-bezier(.13,.7,.57,.99);
-		} 
-	</style>
 	<body>
 		<nav id="header">
 			<a id="navitemimg" href="homepage.html"> <img src="images/Outplay_Gaming_Minimalist_Logo.png" alt="Outplay Gaming Logo" style="height:60px; width: auto;"></a>
 			<ul>
 				<li id="navitem"><a href="aboutus.html">About Us</a></li>
 				<li  id="navitem"><a href="events.html">Events</a></li>
-				<li  id="navitem"><a href="merch.html">Merch</a></li>
+				<li  id="navitem"><a href="rentals.html#merch">Merch</a></li>
 				<li  id="navitem"><a href="rentals.html">Rentals</a></li>
 				<li  id="navitem"><a href="faq.html">FAQ</a></li>
 			</ul>		

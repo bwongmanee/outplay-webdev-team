@@ -50,7 +50,7 @@ a{
 #search-bar-section {
     /* Layout */
     width: 100%;
-    margin-top: 145px; /* 100px (header size) + 45px (space from header to search bar) */
+    margin-top: 130px; /* 100px (header size) + 30px (space from header to search bar) */
     margin-bottom: 45px;
     text-align: center;
 }

@@ -8,8 +8,8 @@
 	<meta name="keywords" content="about us, Outplay, Gaming, information, gaming, local tournaments, Chattanooga">
 	<title>About Us</title>
 	<link rel="icon" href="">
-	<link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="images/outplayfavicon.ico">
+	<link rel="stylesheet" href="css/aboutus.css">
+  <link rel="icon" href="images/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto:wght@300&display=swap" rel="stylesheet">
 
 	<!-- 
@@ -21,34 +21,74 @@
 	
   
    <script>
-			function loadHeaderAndFooter() {
-				var xhrHeader = new XMLHttpRequest();
-				var xhrFooter = new XMLHttpRequest();
+          function loadHeaderAndFooter() {
+            var xhrHeader = new XMLHttpRequest();
+            var xhrFooter = new XMLHttpRequest();
+    
+            xhrHeader.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("header").innerHTML = this.responseText;
+              }
+            };
+    
+            xhrFooter.onreadystatechange = function () {
+              if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("footer").innerHTML = this.responseText;
+              }
+            };
+    
+            xhrHeader.open("GET", "header.html", true);
+            xhrHeader.send();
+    
+            xhrFooter.open("GET", "footer.html", true);
+            xhrFooter.send();
+          }			
+    </script>
 
-				xhrHeader.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-						document.getElementById("header").innerHTML = this.responseText;
-					}
-				};
+    <script> 
+        function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
 
-				xhrFooter.onreadystatechange = function () {
-					if (this.readyState == 4 && this.status == 200) {
-						document.getElementById("footer").innerHTML = this.responseText;
-					}
-				};
+        function animateOnScroll() {
+          var elements = document.querySelectorAll('.animateicons');
+          for (var i = 0; i < elements.length; i++) {
+            if (isElementInViewport(elements[i])) {
+              elements[i].classList.add('show');
+            }
+          }
+        }
 
-				xhrHeader.open("GET", "header.html", true);
-				xhrHeader.send();
+        document.addEventListener('scroll', animateOnScroll);
 
-				xhrFooter.open("GET", "footer.html", true);
-				xhrFooter.send();
-			}
 
-			function notImplementedException() {
-				alert("This feature has not been implemented yet. This webpage is designed for modeling purposes only.");
-			}
-			
-		</script>
+        /*When the icons are no longer in the viewport */
+        
+        $(window).on('load resize scroll', function() {
+        $('.animateicons').each(function() {
+          var elemTop = $(this).offset().top;
+          var elemBottom = elemTop + $(this).outerHeight();
+          var viewportTop = $(window).scrollTop();
+          var viewportBottom = viewportTop + $(window).height();
+
+          if (elemBottom > viewportTop && elemTop < viewportBottom) {
+            $(this).addClass('show').removeClass('hide');
+          } else {
+            $(this).addClass('hide').removeClass('show');
+          }
+        });
+      });
+
+
+
+    </script>
+
 
 </head>
 
@@ -79,14 +119,14 @@
         <div id="sectionalInformation"> 
          
           <div class="section" id="fairplay">
-            <img id="controllerIcon" src="images/gamecontroller.png" alt="A minimalist icon depicting a game controller"> 
+            <img class= "animateicons"id="controllerIcon" src="images/gamecontroller.png" alt="A minimalist icon depicting a game controller"> 
             <h2>Fair Play</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
           <div class="section" id="inclusivity">
-            <img id="handshakeIcon" src="images/handshakeicon.png" alt="A minimalist icon depicting two hands engaging in a handshake"> 
+            <img class= "animateicons" id="handshakeIcon" src="images/handshakeicon.png" alt="A minimalist icon depicting two hands engaging in a handshake"> 
             <h2>Inclusivity</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -94,7 +134,7 @@
             
           </div>
           <div class="section" id="community">
-            <img id="heartIcon" src="images/heart_icon.png" alt="A minimalist icon depicting a simple heart outline">
+            <img class= "animateicons" id="heartIcon" src="images/heart_icon.png" alt="A minimalist icon depicting a simple heart outline">
             <h2>Community</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -112,16 +152,13 @@
               </video>
             </div>
             <div class="bottomContentText">
-              <p>Take a glimpse into one of our tournaments and come join your local gaming community at a tournament near you!</p>
+              <p>Come join your local gaming community at a tournament near you!</p>
             </div>
           </div>
         </div>
        
-        
-
-      
-        <div id="footer"></div>
     </div>
+    <div id="footer"></div>
 </body>
 
 </html>

@@ -12,83 +12,92 @@
 
 
         <script>
-			function loadHeaderAndFooter() {
-				var xhrHeader = new XMLHttpRequest();
-				var xhrFooter = new XMLHttpRequest();
-
-				xhrHeader.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-						document.getElementById("header").innerHTML = this.responseText;
-					}
-				};
-
-				xhrFooter.onreadystatechange = function () {
-					if (this.readyState == 4 && this.status == 200) {
-						document.getElementById("footer").innerHTML = this.responseText;
-					}
-				};
-
-				xhrHeader.open("GET", "header.html", true);
-				xhrHeader.send();
-
-				xhrFooter.open("GET", "footer.html", true);
-				xhrFooter.send();
-			}			
-		</script>
+          function loadHeaderAndFooter() {
+            var xhrHeader = new XMLHttpRequest();
+            var xhrFooter = new XMLHttpRequest();
+    
+            xhrHeader.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("header").innerHTML = this.responseText;
+              }
+            };
+    
+            xhrFooter.onreadystatechange = function () {
+              if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("footer").innerHTML = this.responseText;
+              }
+            };
+    
+            xhrHeader.open("GET", "header.html", true);
+            xhrHeader.send();
+    
+            xhrFooter.open("GET", "footer.html", true);
+            xhrFooter.send();
+          }			
+        </script>
     </head>
     <body onload="loadHeaderAndFooter()">
-        <div class="top-container">
-            <img src="images/controller.png" alt="Background Image">
-            <div class="overlay">
-              <div class="top-section">
-                <h1>We can provide for your event!</h1>
-                <h2>Let's talk!</h2>
-                <h2>Send us an email below!</h2>
-                <div class="email-us-button">
-                    Email Us!
-                </div>
-              </div>
+      <div id="header"></div>
+
+      <div id="rentals-content">
+
+      </div>
+
+      <div class="top-container">
+          <img src="images/controller.png" alt="Background Image">
+          <div class="overlay">
+            <div class="top-section">
+              <h1>We can provide for your event!</h1>
+              <h2>Let's talk!</h2>
+              <h2>Send us an email below!</h2>
+              <div id="emailButton">
+                <a href="#">Email Us!</a>
+              </div>      
             </div>
           </div>
-        
-        <div class="review-section">
-          <div class="review-header">
-            <h2>
-              Don't just take it from us.
-            </h2>
-            <p>
-              Read our customer's reviews below!
-            </p>
-          </div>
-          <div class="reviews">
-            <div class="review-one">
+      </div>
+      
+      <div class="review-section">
+        <div class="review-header">
+          <h2>
+            Don't just take it from us.
+          </h2>
+          <p>
+            Read our customer's reviews below!
+          </p>
+        </div>
+        <div class="reviews">
+          <div class="reviews-row-one">
+            <div class="review-content">
               <h2 class="review-h2">
                 User #1
               </h2>
-              <img src="images/white square.png" alt="profile-picture" class="review-image">
+              <img src="images/white-square.png" alt="profile-picture" class="review-image">
               <p class="review-p">
                 Lorem ipsum dolor sit amet, consectetur adipiscing.
               </p>
             </div>
-            <div class="review-two">
+            <div class="review-content">
               <h2 class="review-h2">
                 User #2
               </h2>
-              <img src="images/white square.png" alt="profile-picture" class="review-image">
+              <img src="images/white-square.png" alt="profile-picture" class="review-image">
               <p class="review-p">
                 Lorem ipsum dolor sit amet, consectetur adipiscing.
               </p>
             </div>
-            <div class="review-three">
+          </div>
+          <div class="reviews-row-two">
+            <div class="review-content">
               <h2 class="review-h2">
                 User #3
               </h2>
-              <img src="images/white square.png" alt="profile-picture" class="review-image">
+              <img src="images/white-square.png" alt="profile-picture" class="review-image">
               <p class="review-p">
                 Lorem ipsum dolor sit amet, consectetur adipiscing.
               </p>
             </div>
-            <div class="review-four">
+            <div class="review-content">
               <h2 class="review-h2">
                 User #4
               </h2>
@@ -99,86 +108,85 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="merch">
-          <div class="merch-reveal-fade-top"> <!-- slideshow/ carousel from: https://codepen.io/YousifW/pen/LKBxZX -->
-            <h1>Check out our merchandise!</h1>
-          </div>
-          <div class="photos reveal fade-bottom">
-            <div class="photo active">
-            <img src="images/merch1.png" alt="merch photo 1">
-            </div>
-    
-            <div class="photo next">
-            <img src="images/merch3.png" alt="merch photo 2">
-            </div>
-    
-            <div class="photo prev">
-            <img src="images/merch2.png" alt="merch photo 3">
-            </div>
-    
-            <div class="swipebuttons">
-            <div id="button" class="reveal fade-right"onclick="gotoPrev()">
+      <div class="merch" id="merch">
+        <div class="merchtext"> <!-- slideshow/ carousel from: https://codepen.io/YousifW/pen/LKBxZX -->
+          <h1>Check our our merchandise too!</h1>
+        </div>
+        <div class="photos">
+          <div class="photo active">
+          <img src="/images/merch1.png" alt="previous event photo 1">
+        </div>
+  
+        <div class="photo next">
+          <img src="/images/merch2.png" alt="previous event photo 2">
+        </div>
+  
+        <div class="photo prev">
+          <img src="/images/merch3.png" alt="previous event photo 6">
+        </div>
+  
+        <div class="swipebuttons">
+            <div id="photobutton" onclick="gotoPrev()">
               <div id="swipebuttontext" style="margin-left: 46px;">
-              <
+              &lt;
               </div>
             </div>
-            <div id="button" class="reveal fade-left" onclick="gotoNext()">
+            <div id="photobutton" onclick="gotoNext()">
               <div id="swipebuttontext" style="margin-left: 52px;">
-              >
-            </div>
-            </div>
+              &gt;
+              </div>
             </div>
           </div>
-          
-        </div>
-        <div id="footer"></div>
+				</div>
+      </div>
+
+      <div id="footer"></div>
         
-        <script src="/js/w3c.js"></script>
+      <script src="/js/w3c.js"></script>
         
-        <script> // photo carousel code from: https://codepen.io/YousifW/pen/LKBxZX 
+      <script> // photo carousel code from: https://codepen.io/YousifW/pen/LKBxZX 
     
-          const slider = document.querySelector(".photos");
-          const slides = document.querySelectorAll(".photo");
-          const button = document.querySelectorAll(".button");
-    
-          let current = 0;
-          let prev = 2; // 1 - # of pictures. make sure to update this in other spots
-          let next = 1;
-    
-          for (let i = 0; i < button.length; i++) {
-            button[i].addEventListener("click", () => i == 0 ? gotoPrev() : gotoNext());
+        const slider = document.querySelector(".photos");
+        const slides = document.querySelectorAll(".photo");
+        const button = document.querySelectorAll(".button");
+  
+        let current = 0;
+        let prev = 2; // 1 - # of pictures. make sure to update this in other spots
+        let next = 1;
+  
+        for (let i = 0; i < button.length; i++) {
+          button[i].addEventListener("click", () => i == 0 ? gotoPrev() : gotoNext());
+        }
+  
+        const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
+  
+        const gotoNext = () => current < 2 ? gotoNum(current + 1) : gotoNum(0);
+  
+        const gotoNum = number => {
+          current = number;
+          prev = current - 1;
+          next = current + 1;
+  
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+            slides[i].classList.remove("prev");
+            slides[i].classList.remove("next");
           }
-    
-          const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
-    
-          const gotoNext = () => current < 2 ? gotoNum(current + 1) : gotoNum(0);
-    
-          const gotoNum = number => {
-            current = number;
-            prev = current - 1;
-            next = current + 1;
-    
-            for (let i = 0; i < slides.length; i++) {
-              slides[i].classList.remove("active");
-              slides[i].classList.remove("prev");
-              slides[i].classList.remove("next");
-            }
-    
-            if (next == 3) {
-              next = 0;
-            }
-    
-            if (prev == -1) {
-              prev = 2;
-            }
-    
-            slides[current].classList.add("active");
-            slides[prev].classList.add("prev");
-            slides[next].classList.add("next");
+  
+          if (next == 3) {
+            next = 0;
           }
-        </script>
-        <div id="footer"></div>
-        
+  
+          if (prev == -1) {
+            prev = 2;
+          }
+  
+          slides[current].classList.add("active");
+          slides[prev].classList.add("prev");
+          slides[next].classList.add("next");
+        }
+      </script>  
     </body>
 </html>

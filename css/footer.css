@@ -1,0 +1,283 @@
+/* faq.css
+        Author:			Benjamin Wongmanee
+        Date Started:	4/19/23
+        Date Modified:	4/25/23
+        Assignment:		Semester Project
+        Purpose:		CSS for Footer
+*/
+
+/* ========================= FOOTER ========================= */
+#footer {              
+    /* Layout */
+    position: relative;
+    width: 100%;
+    height: 265px;
+    top: 0px;
+    z-index: 1;  /* ensures #footer appears behind #background-image and #footer-content */
+
+    /* Design */
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    box-shadow: 0px -7px 4px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to top, #1E1E1E 0%, #353535 100%);
+    border-top: 2px solid #F6C526;
+}
+
+#background-image {
+    /* Layout */
+    position: absolute;
+    width: 575px;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2; /* ensures #background-image appears in front of #footer */
+
+    /* Design */
+    opacity: 0.15;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+#footer-content {
+    /* Layout */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* Positions child elements horizontally along main axis */
+    z-index: 3; /* ensures #footer-content appears in front of #background-image */
+}
+
+
+
+/* ========================= QUICK LINKS SECTION ========================= */
+
+#quick-links {
+    /* Layout */
+    height: 90%;
+    margin-top: 15px;
+    margin-left: 15px;
+
+    /* Design */
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+    #quick-links {
+        width: 20%;
+    }
+}
+
+@media (min-width: 900px) {
+    #quick-links {
+        width: 15%;
+    }
+}
+
+#quick-links header {
+    /* Layout */
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    /* Design */
+    font-weight: 700;
+}
+
+#quick-links nav > ul {
+    /* Layout */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+
+    /* Design */
+    list-style-type: none;
+}
+
+#quick-links nav > ul > li {
+    /* Layout */
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+
+#quick-links nav > ul > li > a:hover {
+    color:#4AACE1;
+    transition: 0.5s;
+}
+
+
+
+/* ========================= STAY CONNECTED SECTION ========================= */
+
+#stay-connected {
+    /* Layout */
+    height: 90%;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+@media (max-width: 900px) {
+    #stay-connected {
+        width: 50%;
+        margin-right: 25px;
+    }
+}
+
+@media (min-width: 900px) {
+    #stay-connected {
+        width: 30%;
+        margin-right: 75px;
+    }
+}
+
+#stay-connected header {
+    /* Layout */
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    /* Design */
+    font-weight: 700;
+    font-style: italic;
+}
+
+#stay-connected p {
+    /* Layout */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#stay-connected #email {
+    /* Layout */
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#stay-connected > #email > #text-box {
+    /* Layout */
+    height: 40px;
+    width: 65%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+
+    /* Design */
+    color: #FFFFFF;
+    background: #565656;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+}
+
+#stay-connected > #email > #sign-up {
+    /* Layout */
+    height: 42px;
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+
+    /* Design */
+    font-size: 20px;
+    color: #FFFFFF;
+    background: #F6C526;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    transition: all 0.25s ease-in-out;
+}
+
+#stay-connected > #email > #sign-up:hover {
+    /* Design */
+    cursor: pointer;
+}
+
+#stay-connected > #email > #sign-up:active {
+    /* Design */
+    background-color: #B58F1C;
+}
+
+#stay-connected #social-media-icons {
+    /* Layout */
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#stay-connected > #social-media-icons > .icons {
+    /* Layout */
+    max-width: 40px;
+    margin-right: 15px;
+    float: left;
+}
+
+#stay-connected > #social-media-icons > .icons:hover {
+    /* Design */
+    cursor: pointer;
+}
+
+
+
+/* ========================= CONTACT US SECTION ========================= */
+
+#contact-us {
+    /* Layout */
+    height: 90%;
+    width: 15%;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#contact-us header {
+    /* Layout */
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    /* Design */
+    font-weight: 700;
+    font-style: italic;
+}
+
+#contact-us p {
+    /* Layout */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+/* ========================= SITE LOGO AND COPYRIGHT SECTION ========================= */
+
+#site-logo {
+    /* Layout */
+    height: 90%;
+    width: 32.5%;
+    margin-top: 15px;
+    margin-left: 15px;
+    display: block; /* displays by default */
+}
+
+@media (max-width: 900px) {
+    #site-logo {
+        display: none; /* hides when on mobile screen */
+    }
+}
+
+#site-logo img {
+    /* Layout */
+    max-height: 90%;
+    margin: 0px;
+    float: right;
+}
+
+#site-logo p {
+    /* Layout */
+    clear: right;
+    float: right;
+    margin: 0px;
+
+    /* Design */
+    font-size: 14px;
+    color: #C3C3C3;
+}

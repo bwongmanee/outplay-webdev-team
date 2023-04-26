@@ -1,8 +1,43 @@
-body{
-    background-color: #1E1E1E;
-    font-family: 'Poppins', sans-serif;
-    color: #FFFFFF;
+/* ========================= BODY =========================*/
+body {
+  /* Layout */
+  margin: 0px;
 
+  /* Design */
+  font-family: 'Poppins', sans-serif;
+  background-color: #353535;
+  color: #FFFFFF;
+}
+
+html { /* for merch link, so it scrolls down smoothly*/
+  scroll-behavior: smooth;
+}
+
+
+/* ========================= SCROLLBAR =========================*/
+::-webkit-scrollbar {
+  /* Layout */
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  /* Design */
+  background-color: #4b4a4a;
+  border-radius: 100px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-track {
+  /* Design */
+  background: linear-gradient(180deg, #1E1E1E 0%, #292929 6.96%, #292929 93.27%, #1E1E1E 100%);
+}
+
+
+
+/* ========================= ANCHOR ELEMENTS ========================= */
+a{
+  /* Design */
+  color: inherit; /* links inherit the color from their parent */
+  text-decoration: none;
 }
 .top-container {
     position: relative;
@@ -36,6 +71,7 @@ body{
 
 .top-section h1{
     font-size: 50px;
+    transform: translateY(75px);
     margin-top: 50%;
     width: 360px;
     display: inline-block;
@@ -45,87 +81,127 @@ body{
 .top-section h2{
     margin-top: 10px;
     font-size: 24px;
+    transform: translateY(75px);
 }
 
-.email-us-button {
-    display: inline-block;
-    padding: 16px 32px;
-    border-radius: 35%;
-    background-color: #273BEC;
-    color: #FFFFFF;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    transition: background-color 0.3s ease;
-  }
-  
-  .email-us-button:hover {
-    background-color: #1A2CC2;
-  }
-  
-  .email-us-button:focus {
-    outline: none;
-  }
+#emailButton {
+  text-align: center;
+  margin-top: 25%;
+  font-family: Poppins;
+  padding: 15px 20px;
+  border: none;
+}
 
-  .review-header{
-    text-align: center;
-  }
+#emailButton a {
+display: inline-block;
+padding: 25px 45px;
+padding-top: 15px;
+padding-bottom: 15px;
+font-size: 24px;
+color: #fff;
+background-color: #1126e9;
+text-decoration: none;
+transition: 0.75s;
+border-radius: 100px;
+}
 
-  .review-header h2{
-    font-size: 42px;
-  }
+#emailButton a:hover {
+  background-color: #4AACE1;
+  cursor: pointer;
+  transition: 0.75s;
+  transform: scale(1.1);
+}
 
-  .review-header p{
-    font-size: 28px;
-  }
+.review-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
-  .review-image{
-    width: 120px;
-    height: auto;
-    border-radius: 50%;
-  }
+.review-header{
+  text-align: center;
+}
 
-  .review-h2{
-    font-size: 24px;
-    padding-left: 130px;
-    transform: translateY(50px);
-  }
+.review-header h2{
+  font-size: 42px;
+}
 
-  .review-p{
-    font-size: 16px;
-    padding-left: 130px;
-    transform: translateY(-100px);
-    width: 170px;
-  }
+.review-header p{
+  font-size: 28px;
+  margin-bottom: 75px;
+}
 
-  .review-one{
-    padding-left: 180px;
-  }
+.review-image{
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+}
 
-  .review-two{
-    padding-left: 680px;
-    transform: translateY(-290px);
-  }
+.review-h2{
+  font-size: 24px;
+  padding-left: 130px;
+  transform: translateY(50px);
+  margin-top: 0px;
+}
 
-  .review-three{
-    transform: translateY(-350px);
-    padding-left: 180px;
-  }
+.review-p{
+  font-size: 16px;
+  padding-left: 130px;
+  transform: translateY(-100px);
+  width: 170px;
+}
 
-  .review-four{
-    padding-left: 680px;
-    transform: translateY(-639px);
-  }
+.reviews-row-one {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+}
+
+.reviews-row-two {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+}
+
+.review-content {
+  margin: 0px 90px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 
 /* photo carousel code from: https://codepen.io/YousifW/pen/LKBxZX  with modifications by kinsley*/
+
+.merch {
+  height: 500px;
+  position: relative;
+  padding: 25px;
+  margin-bottom: 100px;
+}
+
+.merchtext{
+	margin-top: 35px;
+	color: white;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.merchtext h1{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
+/* photo carousel code from: https://codepen.io/YousifW/pen/LKBxZX with modifications by Kinsley*/
 
 .photos{
 	position: absolute;
 	margin-top: 25px;
-	margin-left: 375px;
+	margin-left: 450px;
 	user-select: none;
-  transform: translateY(-550px);
 }
 
 .photos .photo{
@@ -139,64 +215,64 @@ body{
 }
 
 .photo img {
-	width: 100%;
-	height: 100%;
+	max-height: 400px;
 	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
 }
 
 .photo.active {
+  justify-content: center;
 	opacity: 1;
 	z-index: 99;
 	transition: all 450ms cubic-bezier(.13,.65,.3,.92);
 	transform: scale(1.1);
-  }
+}
 
-  .photo.prev {
+.photo.prev {
 	z-index: 2;
 	opacity: 1;
 	margin-left: 200px;
 	opacity: .5;
-  }
+}
   
-  .photo.next {
+.photo.next {
 	z-index: 2;
 	opacity: 1;
 	margin-left: -200px;
 	opacity: .5;
-  }
+}
   
-  .photos .swipebuttons{
+.photos .swipebuttons{
 	position: absolute;
 	top: 50%;
 	left: -175px;
 	transform: translate(-50%, -50%);
 	width: 275px;
 	z-index: 100;
-  }
+}
   
-  #swipebuttontext{
+#swipebuttontext{
 	margin-top: 50px;
 	font-size: 50px;
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
-  }
+}
 
-  .swipebuttons #button {
+.swipebuttons #photobutton {
 	color: #fff;
 	font-size: 32px;
 	cursor: pointer;
 	margin-left: 100px;
 	position: relative;
-	margin: -700px;
+	margin: -500px;
 	margin-bottom: 100px;
 	transition: all 1s cubic-bezier(.13,.7,.57,.99);
 	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
-  }
+}
   
- #button:hover {
+#photobutton:hover {
 	transform: scale(1.1);
-  }
+}
   
-  .swipebuttons #button:before {
+.swipebuttons #photobutton:before {
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -206,24 +282,16 @@ body{
 	background-color: #4AACE1;
 	border-radius: 50%;
 	z-index: -99;
-  }
+}
   
-  .swipebuttons #button:nth-child(1) {
+.swipebuttons #photobutton:nth-child(1) {
 	float: left;
 	margin-left: 100px;
 	margin-top: 400px;
 
-  }
+}
   
-  .swipebuttons #button:nth-child(2) {
+.swipebuttons #photobutton:nth-child(2) {
 	float: right;
 	margin-top: 400px;
-  }
-
-  .merch-reveal-fade-top h1{
-    text-align: center;
-    transform: translateY(-600px);
-  }
-
-  
-
+}
