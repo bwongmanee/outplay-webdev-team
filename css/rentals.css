@@ -106,7 +106,7 @@ border-radius: 100px;
 }
 
 #emailButton a:hover {
-  background-color: #4AACE1;
+  background-color: #353535;
   cursor: pointer;
   transition: 0.75s;
   transform: scale(1.1);
